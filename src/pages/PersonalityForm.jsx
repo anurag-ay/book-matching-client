@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LikertScale from "../components/LikertScale";
 import DropdownMenu from "../components/DropdownMenu";
 import { Box, Button, Typography } from "@mui/material";

@@ -11,11 +11,9 @@ import {
   MenuItem,
   Avatar,
 } from "@mui/material";
-import { useUserInfo } from "../context/userInfoContex";
 
 export default function NavBar() {
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const userInfo = useUserInfo();
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
