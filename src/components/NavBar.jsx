@@ -7,17 +7,15 @@ import {
   Typography,
   Menu,
   Container,
-  Avatar,
   Tooltip,
   MenuItem,
+  Avatar,
 } from "@mui/material";
-import styled from "@emotion/styled";
-// import logo from "../assets/images/logo.svg";
-// import { useUserInfo } from "../context/userInfoContex";
+import { useUserInfo } from "../context/userInfoContex";
 
 export default function NavBar() {
   const [anchorElUser, setAnchorElUser] = useState(null);
-  // const userInfo = useUserInfo();
+  const userInfo = useUserInfo();
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -32,7 +30,6 @@ export default function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* PC Nav */}
-          {/* <Image src={logo} sx={{ display: { xs: "none", md: "flex" } }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -48,7 +45,7 @@ export default function NavBar() {
               textDecoration: "none",
             }}
           >
-            Chatster
+            Book Recommendation
           </Typography>
           {/* Mobile */}
           <Typography
@@ -67,7 +64,7 @@ export default function NavBar() {
               textDecoration: "none",
             }}
           >
-            Chatster
+            Book Recommendation
           </Typography>
 
           {/* Mobile End */}
@@ -76,14 +73,7 @@ export default function NavBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                {/* <Avatar
-                  alt="Remy Sharp"
-                  src={
-                    userInfo?.avatar
-                      ? `data:image/svg+xml;base64,${userInfo?.avatar}`
-                      : "/broken-image.jpg"
-                  }
-                /> */}
+                <Avatar alt="Remy Sharp" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -120,9 +110,3 @@ export default function NavBar() {
     </AppBar>
   );
 }
-
-const Image = styled("img")({
-  height: "2em",
-  width: "2em",
-  marginRight: "0.5em",
-});
