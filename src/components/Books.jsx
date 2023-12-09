@@ -28,7 +28,7 @@ function Books({ books }) {
                     variant="h5"
                     component="div"
                   >
-                    {book.title} <strong>By</strong> {book.author}
+                    {book.title} <strong> By</strong> {book.author}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {book.description}
