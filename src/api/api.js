@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://book-matching-server.vercel.app";
 
 // Intilializing Axios with Base Url
 export default axios.create({
